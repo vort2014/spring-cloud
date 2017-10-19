@@ -13,6 +13,13 @@ public class ProcessingEntity {
     private String card;
     private Integer accountId;
 
+    public ProcessingEntity() {}
+
+    public ProcessingEntity(String card, Integer accountId) {
+        this.card = card;
+        this.accountId = accountId;
+    }
+
     public Integer getId() {
         return id;
     }
