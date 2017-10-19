@@ -6,6 +6,6 @@ spring.datasource:
 
 spring.jpa:
   database-platform: org.hibernate.dialect.H2Dialect
-  #hibernate.ddl-auto: none
-  #generate-ddl: false
-  #properties.hibernate.hbm2ddl.auto: none
+  hibernate.ddl-auto: none
+  generate-ddl: false
+  properties.hibernate.hbm2ddl.auto: none

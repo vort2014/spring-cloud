@@ -3,7 +3,7 @@ package com.luxoft.training.spring.cloud;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@FeignClient
+@FeignClient("CardService") // we take name from bootstap.yml of spring.application.name
 public interface CardServiceClient {
 
     @GetMapping("/create")

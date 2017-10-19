@@ -7,9 +7,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.math.BigDecimal;
 
-@FeignClient
+@FeignClient("AccountService") // we take name from bootstap.yml of spring.application.name
 public interface AccountServiceClient {
 
+    // explicitly need to write @PathVarialble name
     @GetMapping("/checkout/{id}")
-    boolean checkout(@PathVariable Integer id, @RequestParam BigDecimal sum);
+    boolean checkout(@PathVariable("id") Integer id, @RequestParam("sum") BigDecimal sum);
 }
